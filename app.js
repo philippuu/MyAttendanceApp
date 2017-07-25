@@ -107,18 +107,23 @@ app.controller('registerController', function($scope, $firebaseAuth, $firebaseAr
         var auth = $firebaseAuth();
         auth.$createUserWithEmailAndPassword(username, password)
             .then(function(user) {
+                if (!user) {
+                    alert('user already taken');
+                    console.log('user already available');
+                } else {
+                    auth.$onAuthStateChanged(function(user) {
+                        if (user) {
+                            var ref = firebase.database().ref('Users');
+                            $firebaseArray(ref).$add($scope.user)
+                            console.log('wow');
+                        }
+                    })
+                }
                 console.log(user.uid);
                 $location.path('/login');
             })
             .catch(function(error) {
                 console.log(error);
             })
-        auth.$onAuthStateChanged(function(user) {
-            if (user) {
-                var ref = firebase.database().ref('Users');
-                $firebaseArray(ref).$add($scope.user)
-                console.log('wow');
-            }
-        })
     }
 });
