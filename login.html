@@ -1,0 +1,28 @@
+<header>
+    <div id="logos">
+        <h1>ATTENDANCE REGISTER</h1>
+        <nav><a href="#!/register">Register</a></nav>
+    </div>
+</header>
+<div id="main">
+    <div id="content">
+        <h3>Login form</h3>
+        <form name="myForm" id="myForm">
+            <fieldset>
+                <div class="formLayout">
+                    <div class="formLayout_left">
+                        <label for="email">E-Mail/USER: </label>
+                        <input ng-model="user.email" type="email" name="email" id="email" required="required" placeholder="me@example.com" />
+                        <br />
+                        <label for="password">Password: </label>
+                        <input ng-model="user.password" type="password" name="password" id="password" required="required" placeholder="Password" />
+                        <br />
+                        <br />
+                        <button ng-click="login()" type="submit" id="submit" class="button">LOGIN</button>
+                        <br />
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

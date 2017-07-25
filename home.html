@@ -1,0 +1,41 @@
+<header>
+    <div id="logos">
+        <h1>ATTENDANCE REGISTER</h1>
+        <nav>
+            <a ng-click="logout()">LogOut</a>
+            <a href="index.html">Register</a>
+            <a href="#!/home">Home</a>
+        </nav>
+    </div>
+</header>
+<div id="main">
+    <div id="content">
+        <h1>Welcome {{ username }}</h1>
+        <div>
+            <span ng-show="checkbox == checkbox.checked">you are still marked ABSENT</span>
+            <form>
+                <label>Mark yourself present:
+                    <input type="checkbox" ng-model="checkboxModel" ng-true-value="'Present'" ng-false-value="'Absent'">
+                </label>
+                <br/>
+            </form>
+        </div>
+        <div>
+            <h3>All users:</h3>
+            <table>
+                <tr>
+                    <th>User Name</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Status</th>
+                </tr>
+                <tr ng-repeat="user in data">
+                    <td>{{user.username}}</td>
+                    <td>{{user.firstname}}</td>
+                    <td>{{user.lastname}}</td>
+                    <td>{{ checkboxVal }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

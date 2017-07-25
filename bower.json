@@ -1,0 +1,13 @@
+{
+    "name": "angularjsstarterpack",
+    "description": "starter pack",
+    "dependencies": {
+        "angular": "^1.6.5",
+        "angular-route": "^1.6.5",
+        "firebase": "3.9.0",
+        "angularfire": "^2.3.0"
+    },
+    "resolutions": {
+        "firebase": "3.9.0"
+    }
+}

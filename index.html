@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ATTENDANCE REGISTER</title>
+    <style type="text/css"></style>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body ng-app="myApp">
+
+    <div ng-view id="wrapper"></div>
+
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBxYjSOvIN16SjGftE7t1PBT21eZRLx0L4",
+            authDomain: "attendnce-register-app.firebaseapp.com",
+            databaseURL: "https://attendnce-register-app.firebaseio.com",
+            projectId: "attendnce-register-app",
+            storageBucket: "attendnce-register-app.appspot.com",
+            messagingSenderId: "781581823686"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

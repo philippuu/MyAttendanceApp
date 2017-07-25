@@ -1,0 +1,53 @@
+<header>
+    <div id="logos">
+        <h1>ATTENDANCE REGISTER</h1>
+        <nav><a href="#!/">Login</a></nav>
+    </div>
+</header>
+<div id="main">
+    <div id="content">
+        <h3>Registration form</h3>
+        <form name="registerForm" id="registerForm">
+            <fieldset>
+                <div class="formLayout">
+                    <div class="formLayout_left">
+                        <label for="firstName">First Name: </label>
+                        <input type="text" name="firstname" id="firstName" required="required" ng-model="user.firstname" placeholder="First Name" >
+                        <br>
+                        <label for="lastname">Last Name: </label>
+                        <input type="text" name="lastname" id="lastname" required="required" ng-model="user.lastname" placeholder="Last Name" >
+                        <br>
+                        <label for="phone">User Name: </label>
+                        <input type="text" name="username" id="username" required="required" ng-model="user.username" placeholder="User Name" >
+                        <br>
+                        <label for="email">E-Mail: </label>
+                        <input ng-model="user.email" type="email" name="email" id="email" required="required" placeholder="me@example.com" >
+                        <br>
+                        <label for="password">Password: </label>
+                        <input ng-model="user.password" type="password" name="password" id="password" required="required" placeholder="Password" >
+                        <br>
+                        <br>
+                        <button ng-click="register()" type="submit" id="submit" class="button">REGISTER</button>
+                        <br>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<!-- <fieldset>
+                <div class="formLayout">
+                    <div class="formLayout_left">
+                        <label for="email">E-Mail/USER: </label>
+                        <input ng-model="user.email" type="email" name="email" id="email" required="required" placeholder="me@example.com" >
+                        <br>
+                        <label for="password">Password: </label>
+                        <input ng-model="user.password" type="password" name="password" id="password" required="required" placeholder="Password" >
+                        <br>
+                        <br>
+                        <button ng-click="register()" type="submit" id="submit" class="button">REGISTER</button>
+                        <br>
+                    </div>
+                </div>
+            </fieldset> -->
